@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icons/favicon1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Google</title>
+</head>
+<body class="overflow-x">
+    <header class="w-full h-12 alinhamento justify-end mt-2 gap-4">
+        <nav id="textHeader" class="alinhamento justify-start w-full sm:justify-end">
+            <a id="gmailTodas" class="colorText marginY underline-offset-[14px] sm:hover:underline sm:hover:underline sm:hover:underline-offset-1 sm:hover:text-[#484848]" href="#">Gmail</a>
+            <a class="colorText sm:hover:underline sm:hover:underline-offset-1 sm:hover:text-[#484848]" href="#">Imagens</a>
+            <i id="menuIcon" class="ph-list-bold block sm:hidden absolute top-5 left-2 cursor-pointer text-lg"></i>
+        </nav>
+
+        <div id="containerApp" class="h-10 w-12 alinhamento justify-center cursor-pointer sm:hover:bg-gray-400 sm:hover:rounded-full ">
+            <i id="googleApps" class="ph-dots-nine-bold text-[1.7rem]"></i>
+        </div>
+
+        <div class="alinhamento w-12 sm:h-10 sm:w-10 justify-center cursor-pointer mr-4">
+            <img 
+                src="https://www.google.com.br/webhp?authuser=0"
+                alt="Imagem de perfil do google"
+                class="rounded-full"
+            >
+        </div>
+        
+        <div id="app" class="bg-[#333] hidden max-h-[27rem] w-72 sm:max-h-[30rem] sm:w-[22rem] absolute top-16 sm:top-14 right-4 rounded overflow-x-hidden overflow-scroll z-50">
+            <div class="alinhamento justify-around mx-6 mb-2 mt-4">
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://myaccount.google.com/?utm_source=OGB&tab=ik&utm_medium=app" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.google.com.br/')]"></div>
+                        </div>
+                        Conta
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://www.google.com.br/" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/355037/google.svg')]"></div>
+                        </div>
+                        Pesquisa
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl cursor-pointer text-center text-white">
+                    <a href="https://www.google.com.br/maps?hl=pt-BR&authuser=0" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">                
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/353819/google-maps.svg')]"></div>
+                        </div>
+                        Maps
+                    </a>
+                </div>
+            </div>
+
+            <div class="alinhamento justify-around mx-6 mb-2 mt-4">
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://www.youtube.com/?gl=BR" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/13671/youtube.svg')]"></div>
+                        </div>
+                        Youtube
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://play.google.com/store/games?hl=pt-BR" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/349393/google-play.svg')]"></div>
+                        </div>
+                        Play Store
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl cursor-pointer text-center text-white">
+                    <a href="https://news.google.com/topstories?hl=pt-BR&gl=BR&ceid=BR:pt-419" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">                
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/archive/d/da/20190930154509%21Google_News_icon.svg/120px-Google_News_icon.svg.png')]"></div>
+                        </div>
+                        Notícias
+                    </a>
+                </div>
+            </div>
+
+            <div class="alinhamento justify-around mx-6 mb-2 mt-4">
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://mail.google.com/mail/u/0/" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/349378/gmail.svg')]"></div>
+                        </div>
+                        Gmail
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://meet.google.com/?hs=197&pli=1&authuser=0" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/343559/google-meet-meeting-communication-team.svg')]"></div>
+                        </div>
+                        Meet
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl cursor-pointer text-center text-white">
+                    <a href="https://mail.google.com/chat/u/0/" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">                
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/archive/d/de/20201126121044%21Google_Chat_icon_%282020%29.svg/120px-Google_Chat_icon_%282020%29.svg.png')]"></div>
+                        </div>
+                        Chat
+                    </a>
+                </div>
+            </div>
+
+            <div class="alinhamento justify-around mx-6 mb-2 mt-4">
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://contacts.google.com/?hl=pt-BR" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/archive/9/93/20181217005431%21Google_Contacts_icon.svg/120px-Google_Contacts_icon.svg.png')]"></div>
+                        </div>
+                        Contato
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://drive.google.com/drive/u/0/" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/223038/drive.svg')]"></div>
+                        </div>
+                        Drive                        
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl cursor-pointer text-center text-white">
+                    <a href="https://calendar.google.com/calendar/u/0/r?pli=1" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">                
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/353803/google-calendar.svg')]"></div>
+                        </div>
+                        Agenda
+                    </a>
+                </div>
+            </div>
+
+            <div class="alinhamento justify-around mx-6 mb-2 mt-4">
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://translate.google.com.br/?hl=pt-BR" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/223044/translate-language.svg')]"></div>
+                        </div>
+                        Tradutor                    
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://photos.google.com/?pageId=none&pli=1" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/353826/google-photos.svg')]"></div>
+                        </div>
+                        Fotos                      
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl cursor-pointer text-center text-white">
+                    <a href="https://duo.google.com/?usp=duo_ald" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">                
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/archive/f/f9/20200824083139%21Google_Duo_icon.svg/119px-Google_Duo_icon.svg.png')]"></div>
+                        </div>
+                        Duo          
+                    </a>
+                </div>
+            </div>
+
+            <div class="alinhamento justify-between mx-6 mb-2 mt-4">
+                <div id="chrome" class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://www.google.com/chrome/?brand=CHZO&utm_source=google.com&utm_medium=desktop-app-launcher&utm_campaign=desktop-app-launcher&utm_content=chrome-logo&utm_keyword=CHZO" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/378781/chrome.svg')]"></div>
+                        </div>
+                        Chrome            
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://shopping.google.com.br/?nord=1" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Google_Shopping.svg/120px-Google_Shopping.svg.png?20201101141923')]"></div>
+                        </div>
+                        Shopping
+                    </a>
+                </div>
+                <div class="w-20 h-24 sm:h-[90px] sm:w-20">
+                    <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2"></div>
+                </div>
+            </div>
+            
+            <div class="w-100 h-[1px] bg-white opacity-40"></div>
+
+            <div class="alinhamento justify-between mx-6 mb-2 mt-4">
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://www.google.com/finance/?authuser=0" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://th.bing.com/th/id/R.efb220e1c36062ba2b316d216deb09ef?rik=UHhRorlm2aMAlg&pid=ImgRaw&r=0')]"></div>
+                        </div>
+                        Finanças
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://docs.google.com/document/u/0/?usp=docs_alc" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/349385/google-collaborative-content-tools.svg')]"></div>
+                        </div>
+                        Document
+                        os
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://docs.google.com/spreadsheets/u/0/" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://img.icons8.com/color/344/google-forms.png')]"></div>
+                        </div>
+                        Planilhas   
+                    </a>
+                </div>
+            </div>
+
+            <div class="alinhamento justify-between mx-6 mb-2 mt-4">
+                <div class="w-20 h-24 sm:h-[110px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://docs.google.com/presentation/u/0/" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.gstatic.com/images/branding/product/1x/slides_2020q4_48dp.png')]"></div>
+                        </div>
+                        Apresentaç
+                        ões  
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://books.google.com.br/?hl=pt-BR&authuser=0" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://th.bing.com/th/id/OIP.Ql5R-EkQypTKIob1zEHXpgAAAA?pid=ImgDet&w=300&h=300&rs=1')]"></div>
+                        </div>
+                        Livro
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://www.blogger.com/?authuser=0" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Blogger.svg/120px-Blogger.svg.png?20161114185440')]"></div>
+                        </div>
+                        Blogger       
+                    </a>
+                </div>
+            </div>
+
+            <div class="alinhamento justify-between mx-6 mb-2 mt-4">
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://hangouts.google.com/" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/223046/hangouts.svg')]"></div>
+                        </div>
+                        Hangouts    
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://keep.google.com/u/0/" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png')]"></div>
+                        </div>
+                        Keep                    
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://jamboard.google.com/?authuser=0&usp=jam_ald" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/archive/c/c0/20210731205408%21Google_Jamboard_logomark.svg/120px-Google_Jamboard_logomark.svg.png')]"></div>
+                        </div>
+                        Jamboard
+                    </a>
+                </div>
+            </div>
+
+            <div class="alinhamento justify-between mx-6 mb-2 mt-4">
+                <div class="w-20 h-24 sm:h-[110px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://classroom.google.com/u/0/h" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/archive/2/25/20201023125915%21Google_Classroom_icon.svg/120px-Google_Classroom_icon.svg.png')]"></div>
+                        </div>
+                        Sala
+                        de Aula        
+                    </a>
+                </div>
+                <div class="w-20 h-20 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://earth.google.com/web/?authuser=0" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Google_Earth_icon.svg/120px-Google_Earth_icon.svg.png?20210607063331')]"></div>
+                        </div>
+                        Earth
+                    </a>
+                </div>
+                <div class="w-20 h-24 sm:h-[110px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://artsandculture.google.com/?hl=pt-BR&utm_source=ogs.google.com&utm_medium=referral&authuser=0" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Google_Arts_and_Culture_logo.svg/296px-Google_Arts_and_Culture_logo.svg.png?20191009060629')]"></div>
+                        </div>
+                        Arts & Culture
+                    </a>
+                </div>
+            </div>
+
+            <div class="alinhamento justify-between mx-6 mb-2 mt-4">
+                <div class="w-20 h-24 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://ads.google.com/home/?subid=ww-ww-xs-ip-awhc-a-ogb_cons!o2&authuser=0" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/archive/c/c7/20190505170126%21Google_Ads_logo.svg/96px-Google_Ads_logo.svg.png')]"></div>
+                        </div>
+                        ADS
+                    </a>
+                </div>
+                <div class="w-20 h-24 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://podcasts.google.com/" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/349395/google-podcasts.svg')]"></div>
+                        </div>
+                        Podcast
+                    </a>
+                    
+                </div>
+                <div class="w-20 h-24 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://www.google.com.br/save?authuser=0" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://iconape.com/wp-content/files/gz/61987/png/google-collections.png')]"></div>
+                        </div>
+                        Coleções
+                    </a>
+                    
+                </div>
+            </div>
+
+            <div class="alinhamento justify-between mx-6 mb-2 mt-4">
+                <div class="w-20 h-24 sm:h-[110px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://one.google.com/?utm_source=app_launcher&utm_medium=web&utm_campaign=all&utm_content=google_oo" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://www.svgrepo.com/show/353821/google-one.svg')]"></div>
+                        </div>
+                        Google One
+                    </a>
+                </div>
+                <div class="w-20 h-24 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://www.google.com/travel/?dest_src=al&authuser=0" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://1.bp.blogspot.com/-7UHyPOuADT4/YA945HW-IyI/AAAAAAAABbQ/dNBQoVvggKwSuqq34EhUTV-RkWWoznXgwCLcBGAsYHQ/s400/Google%2BTravel%2B%255Bbagilogo.com%255D.png')]"></div>
+                        </div>
+                        Viagens
+                    </a>
+                </div>
+                <div class="w-20 h-24 sm:h-[90px] sm:w-20 hover:bg-[#222] rounded-xl  cursor-pointer text-center text-white">
+                    <a href="https://docs.google.com/forms/u/0/" target="_blank">
+                        <div class="w-10 sm:h-12 sm:w-12 mx-auto mt-2">
+                            <div class="rounded-full h-10 w-10 bg-cover bg-[url('https://iconape.com/wp-content/png_logo_vector/google-forms.png')]"></div>
+                        </div>
+                        Formulários
+                    </a>
+                </div>
+            </div>
+
+            <div class="alinhamento justify-center mb-4 mt-8">
+                <a href="https://about.google/intl/pt-BR/products/" target="_blank">
+                    <button 
+                        type="button" 
+                        class="px-5 py-2 border border-3 border-[#5f6368] text-[#8ab4f8] bg-transparent rounded hover:bg-slate-600 transition-colors"
+                    >
+                    Mais do Google
+                    </button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="menu" class="w-60 h-screen z-50 sm:hidden absolute top-0 left-[28rem] bg-[#fff]">
+        <div class="alinhamento w-24 h-12">
+            <img 
+                src="https://www.svgrepo.com/show/303183/google-2015-logo.svg" 
+                alt="logo da google miniatura"
+                class="w-full h-20"
+            >
+        </div>
+        <div class="alinhamento">
+            <ul class="w-full text-base">
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-house-bold"></i>
+                    Página inicial
+                </li>
+                
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-clock-counter-clockwise-bold"></i>
+                    Histórico de pesquisa
+                </li>
+
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-bookmarks-simple-bold"></i>
+                    Coleções
+                </li>
+
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-binoculars-bold"></i>
+                    Pesquisa off-line
+                </li>
+
+                <div class="w-100 h-[1px] bg-[#b8b8b8] my-2"></div>
+
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-gear-bold"></i>
+                    Configurações
+                </li>
+                
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-shield-bold"></i>
+                    Seus dados de pesquisa
+                </li>
+
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-eye-bold"></i>
+                    Ocultar resultados com conteudo explicito: Ativado
+                </li>
+
+                <li id="tema" class="alinhamento w-full gap-3 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-sun-bold"></i>
+                    Tema escuro: <h4 id="whiteDark">Desativado</h4> 
+                </li>
+
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-file-search-bold"></i>
+                    Como funciona a pesquisa
+                </li>
+                
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-question-bold"></i>
+                    Ajuda
+                </li>
+
+                <li class="alinhamento w-full gap-4 mt-4 flex pl-3 cursor-pointer hover:bg-blue-400">
+                    <i class="ph-chat-bold"></i>
+                    Enviar feedback
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <main class="h-[73vh] w-100 sm:h-[78.6vh] text-center">
+        <div class="h-32 alinhamento justify-center">
+            <img 
+                src="https://www.svgrepo.com/show/353798/google.svg" 
+                alt="logo da google"
+                class="h-40 sm:h-80 cursor-pointer"
+            >
+        </div>
+
+        <form action="http://google.com/search" method="GET" id="enviar">
+            <div class="alinhamento w-full sm:w-5/12 sm:mx-auto py-1 sm:py-2 sm:mt-8 opacity-30 border-2 border-zinc-400 hover:border-2 hover:border-zinc-900 rounded-full">
+                <i class="ph-magnifying-glass-bold text-xl px-[13px]"></i>
+
+                <div class="flex-1">
+                    <label for="enviar"></label>
+                    <input 
+                        type="text" 
+                        name="q" 
+                        id="enviar" 
+                        class="w-full flex flex-[100%] sm:text-lg bg-transparent outline-none"
+                        autocomplete="on"
+                        autocorrect="on"
+                        autofocus
+                    >
+                </div>
+
+                <i class="ph-microphone-bold text-xl px-[13px]"></i>
+            </div>
+
+            <div class="alinhamento justify-center mt-7 w-full">
+                <input
+                    type="submit" 
+                    class="px-5 py-2 bg-[#f2f2f2] text-dark bg-transparent rounded-md mr-4 border border-transparent hover:border-solid hover:border-[#5f6368]"
+                    value="Pesquisa Google"
+                    role="button"
+                    id="inputBotao"
+                >
+                <a href="https://www.google.com/doodles" target="_blank">
+                    <input
+                        type="button" 
+                        class="px-5 py-2 bg-[#f2f2f2] text-dark bg-transparent rounded-md cursor-pointer border border-transparent hover:border-solid hover:border-[#5f6368]"
+                        value="Estou com sorte"
+                        id="inputBotao"
+                    >
+                </a>
+            </div>
+        </form>
+    </main>
+
+    <footer class="w-full sm:h-22 bg-[#f2f2f2] text-xs sm:text-base">
+        <div class="px-[32px] pt-[10px] sm:text-[18px] opacity-40">
+            Brasil
+        </div>
+
+        <div id="barra" class="w-100 h-[1px] bg-[#e4e4e4] mt-2 mb-5 sm:mb-3 sm:my-2"></div>
+
+        <div id="barra" class="w-100 sm:hidden h-[1px] bg-[#e4e4e4] my-2"></div>
+
+        <div class="sm:alinhamento sm:justify-between sm:px-[38px]">
+            <ul class="grid grid-rows-5 grid-cols-12 sm:flex sm:gap-8 sm:text-base opacity-40">
+                <h4 id="tema" class="col-start-4 col-end-8 row-span-1 sm:hidden cursor-pointer">
+                    Tema escuro: <span id="whiteDark">Desativado</span>
+                </h4>
+
+                <a 
+                    href="https://about.google/?utm_source=google-BR&utm_medium=referral&utm_campaign=hp-footer&fg=1" 
+                    class="col-start-10 col-end-11 row-start-5 row-end-5 sm:hover:underline sm:hover:underline-offset-2"
+                    target="_blank"
+                >
+                Sobre
+                </a>
+
+                <a 
+                    href="https://ads.google.com/intl/pt-BR_br/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" 
+                    class="col-start-4 col-end-6 row-start-5 row-end-5 sm:hover:underline sm:hover:underline-offset-2"
+                    target="_blank"
+                >
+                Publicidade
+                </a>
+
+                <a 
+                    href="https://smallbusiness.withgoogle.com/intl/pt-BR_br/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=ww-ww-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u&c=BR#!/" 
+                    class="col-start-7 col-end-8 row-start-5 row-end-5 sm:hover:underline sm:hover:underline-offset-2"
+                    target="_blank"
+                >
+                Negócios
+                </a>
+
+                <a 
+                    href="https://www.google.com/search/howsearchworks/?fg=1" 
+                    class="hidden sm:block sm:mr-[30rem] sm:hover:underline sm:hover:underline-offset-2"
+                    target="_blank"
+                >
+                Como funciona a pesquisa
+                </a>
+
+                <a 
+                    href="https://policies.google.com/privacy?hl=pt-BR&fg=1" 
+                    class="col-start-5 col-end-7 row-start-3 row-end-3 sm:hover:underline sm:hover:underline-offset-2"
+                    target="_blank"
+                >
+                Privicidade
+                </a>
+    
+                <a 
+                    href="https://policies.google.com/terms?hl=pt-BR&fg=1" 
+                    class="col-start-8 col-end-9 row-start-3 row-end-3 sm:hover:underline sm:hover:underline-offset-2"
+                    target="_blank"
+                >
+                Termos
+                </a>
+    
+                <h4
+                    class="col-start-9 col-end-10 row-start-1 row-end-1 cursor-pointer sm:hover:underline sm:hover:underline-offset-2"
+                    id="configMenu"
+                >
+                Configurações
+                </h4>
+            </ul>
+        </div>
+
+        <div id="menuConfig" class="absolute hidden w-48 sm:w-60 h-58 bottom-32 sm:bottom-14 right-7 bg-[#fff] border shadow rounded-xl">
+            <ul class="my-2 text-[12px] sm:text-base">
+                <a href="https://www.google.com/preferences?hl=pt-BR&fg=1" target="_blank">
+                    <li class="py-4 px-4 sm:px-6 sm:py-1 opacity-70 sm:hover:bg-zinc-300">
+                        Configurações de Pesquisa
+                    </li>
+                </a>
+    
+                <a href="https://www.google.com/advanced_search?hl=pt-BR&fg=1" target="_blank">
+                    <li class="py-4 px-4 sm:px-6 sm:py-1 opacity-70 sm:hover:bg-zinc-300">
+                        Pesquisa Avançada
+                    </li>
+                </a>
+    
+                <a href="https://myactivity.google.com/privacyadvisor/search?utm_source=googlemenu&fg=1" target="_blank">
+                    <li class="py-4 px-4 sm:px-6 sm:py-1 opacity-70 sm:hover:bg-zinc-300">
+                        Seus dados na Pesquisa
+                    </li>
+                </a>
+    
+                <a href="https://myactivity.google.com/product/search?utm_source=google&hl=pt-BR&fg=1" target="_blank">
+                    <li class="py-4 px-4 sm:px-6 sm:py-1 opacity-70 sm:hover:bg-zinc-300">
+                        Histórico de Pesquisa
+                    </li>
+                </a>
+    
+                <a href="https://support.google.com/websearch/?visit_id=637935137788695688-1081031756&hl=pt-BR&rd=2#topic=3378866" target="_blank">
+                    <li class="py-4 px-4 sm:px-6 sm:py-1 opacity-70 sm:hover:bg-zinc-300">
+                        Ajuda de Pesquisa
+                    </li>
+                </a>
+    
+                <li class="cursor-pointer py-4 px-4 sm:px-6 sm:py-1 opacity-70 sm:hover:bg-zinc-300">
+                    Enviar Feedback
+                </li>
+
+                <div id="barra" class="w-100 hidden sm:block h-[1px] bg-[#e4e4e4] mb-4"></div>
+    
+                <li 
+                    id="tema" 
+                    class="hidden cursor-pointer py-8 px-4 sm:px-6 sm:py-1 sm:block opacity-70 sm:hover:bg-zinc-300"
+                >
+                    Tema escuro: <span id="whiteDark">Desativado</span>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
